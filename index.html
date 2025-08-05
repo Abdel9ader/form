@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استمارة التغذية - د. عزة توفيق</title>
+
+    <!-- تحميل الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="form-container">
+        <div class="form-decoration" aria-hidden="true">
+          <i class="fas fa-leaf"></i>
+        </div>
+
+        <form id="nutritionForm" novalidate>
+          <!-- سكشن المعلومات الشخصية -->
+          <fieldset class="form-section">
+            <legend>المعلومات الشخصية</legend>
+
+            <div class="form-group">
+              <label for="name">الاسم بالكامل:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="الاسم الثلاثي"
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="age">السن:</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                required
+                placeholder="بالسنوات"
+                min="10"
+                max="100"
+                aria-required="true"
+              />
+            </div>
+          </fieldset>
+
+          <!-- سكشن القياسات الجسدية -->
+          <fieldset class="form-section">
+            <legend>القياسات الجسدية</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="weight">الوزن (كجم):</label>
+                <input
+                  type="number"
+                  id="weight"
+                  name="weight"
+                  required
+                  placeholder="بالكيلوجرام"
+                  step="0.1"
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="height">الطول (سم):</label>
+                <input
+                  type="number"
+                  id="height"
+                  name="height"
+                  required
+                  placeholder="بالسنتيمتر"
+                  aria-required="true"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- سكشن العادات الصحية -->
+          <fieldset class="form-section">
+            <legend>العادات الصحية</legend>
+
+            <div class="form-group">
+              <label for="exercise">هل تمارس الرياضة او في حركة في يومك؟</label>
+              <select
+                id="exercise"
+                name="exercise"
+                required
+                aria-required="true"
+              >
+                <option value="" disabled selected>اختر الإجابة</option>
+                <option value="نعم">نعم</option>
+                <option value="لا">لا</option>
+                <option value="أحياناً">أحياناً</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sleep">نظام النوم (عدد الساعات):</label>
+              <input
+                type="text"
+                id="sleep"
+                name="sleep"
+                placeholder="مثال: 6-8 ساعات"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="work_nature">طبيعة العمل أو الدراسة:</label>
+              <textarea
+                id="work_nature"
+                name="work_nature"
+                placeholder="صف طبيعة عملك أو دراستك (ساعات الجلوس، النشاط البدني، إلخ)"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="water_intake">معدل شرب الماء يومياً:</label>
+              <input
+                type="text"
+                id="water_intake"
+                name="water_intake"
+                placeholder="عدد الأكواب أو اللترات"
+              />
+            </div>
+          </fieldset>
+
+          <!-- سكشن المعلومات الصحية -->
+          <fieldset class="form-section">
+            <legend>المعلومات الصحية</legend>
+
+            <div class="form-group">
+              <label for="diseases">هل تعاني من أي أمراض أو حالات صحية؟</label>
+              <textarea
+                id="diseases"
+                name="diseases"
+                placeholder="يرجى ذكر أي أمراض أو أدوية تتناولها"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="dailyFood">نظام الأكل اليومي:</label>
+              <textarea
+                id="dailyFood"
+                name="dailyFood"
+                placeholder="صف نظامك الغذائي المعتاد"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="favorite_foods">الأطعمة المفضلة التي تصعب الاستغناء عنها:</label>
+              <textarea
+                id="favorite_foods"
+                name="favorite_foods"
+                placeholder="اذكر الأطعمة التي تحبها ولا تستطيع الاستغناء عنها"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <!-- سكشن الهدف -->
+          <fieldset class="form-section">
+            <legend>الهدف من الاستشارة</legend>
+
+            <div class="form-group">
+              <label for="goal">الهدف من الاستشارة:</label>
+              <select id="goal" name="goal" required aria-required="true">
+                <option value="" disabled selected>اختر هدفك</option>
+                <option value="زيادة">زيادة الوزن</option>
+                <option value="نقصان">نقصان الوزن</option>
+                <option value="تثبيت">تثبيت الوزن</option>
+                <option value="صحة">تحسين الصحة العامة</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> إرسال البيانات
+          </button>
+        </form>
+
+        <div
+          id="successMessage"
+          class="success-message"
+          role="alert"
+          aria-live="polite"
+        >
+          <i class="fas fa-check-circle" aria-hidden="true"></i> تم حفظ البيانات
+          بنجاح
+        </div>
+      </div>
+    </main>
+
+    <!-- Supabase JavaScript Library -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="form.js" defer></script>
+  </body>
+</html>
